@@ -16,7 +16,7 @@ License:	GPL
 Url:		http://newbreedsoftware.com/bugsquish/
 Group:		Games/Arcade
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
-BuildRequires:	XFree86-devel SDL_image-devel SDL_mixer-devel alsa-lib-devel esound-devel
+BuildRequires:	X11-devel SDL_image-devel SDL_mixer-devel alsa-lib-devel esound-devel
 
 %description
 Bugs are trying to suck blood out of your arm! Squish them with with your fly
