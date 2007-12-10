@@ -1,6 +1,6 @@
 %define	name	bugsquish
 %define	version	0.0.6
-%define release	%mkrel 9
+%define release	%mkrel 10
 %define	Summary	Kill bugs with mouse
 
 Summary:	%{Summary}
@@ -37,17 +37,6 @@ install -D %{name} $RPM_BUILD_ROOT%{_gamesbindir}/%{name}
 install -d $RPM_BUILD_ROOT%{_gamesdatadir}/%{name}
 cp -a data/* $RPM_BUILD_ROOT%{_gamesdatadir}/%{name}
 
-install -d $RPM_BUILD_ROOT%{_menudir}
-cat <<EOF > $RPM_BUILD_ROOT%{_menudir}/%{name}
-?package(%{name}):command="%{_gamesbindir}/%{name}" \
-		icon=%{name}.png \
-		needs="x11" \
-		section="More Applications/Games/Arcade" \
-		title="Bugsquish"\
-		longtitle="%{Summary}"\
-		xdg="true"
-EOF
-
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 [Desktop Entry]
@@ -58,7 +47,7 @@ Exec=%_gamesbindir/%{name}
 Icon=%{name}
 Terminal=false
 Type=Application
-Categories=Game;ArcadeGame;X-MandrivaLinux-MoreApplications-Games-Arcade;
+Categories=Game;ArcadeGame;
 EOF
 
 install -D -m644 %SOURCE6 $RPM_BUILD_ROOT%{_iconsdir}/%{name}.png
@@ -80,7 +69,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_gamesbindir}/%{name}
 %{_gamesdatadir}/%{name}
 %{_datadir}/applications/*
-%{_menudir}/%{name}
 %{_iconsdir}/%{name}.png
 %{_miconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
