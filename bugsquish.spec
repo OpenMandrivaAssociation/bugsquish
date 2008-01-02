@@ -15,6 +15,7 @@ Patch0:		bugsquish-0.0.2-fix-CFLAGS.patch.bz2
 License:	GPL
 Url:		http://newbreedsoftware.com/bugsquish/
 Group:		Games/Arcade
+BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:	X11-devel SDL_image-devel SDL_mixer-devel alsa-lib-devel esound-devel
 
 %description
