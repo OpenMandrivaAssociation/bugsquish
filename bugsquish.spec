@@ -16,7 +16,9 @@ License:	GPL
 Url:		http://newbreedsoftware.com/bugsquish/
 Group:		Games/Arcade
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
-BuildRequires:	X11-devel SDL_image-devel SDL_mixer-devel alsa-lib-devel esound-devel
+BuildRequires:	SDL-devel
+BuildRequires:	SDL_image-devel
+BuildRequires:	SDL_mixer-devel
 
 %description
 Bugs are trying to suck blood out of your arm! Squish them with with your fly
@@ -29,7 +31,7 @@ chmod a+r -R .
 rm -rf `find -name .xvpics`
 
 %build
-%make CFLAGS="%{optflags}" DATA_PREFIX=%{_gamesdatadir}/%{name}/
+%make CFLAGS="%{optflags} %ldflags" DATA_PREFIX=%{_gamesdatadir}/%{name}/
 
 %install
 rm -rf $RPM_BUILD_ROOT
