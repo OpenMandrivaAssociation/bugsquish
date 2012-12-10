@@ -1,5 +1,3 @@
 sources:
-  "bugsquish-0.0.6.tar.bz2:"	cac4dae0c7b1aaf137a3b4a77f13090843853d66
-  "bugsquish-16.png:"	4fb732ee9e808bfb837cbd4ac607f38da67bda29
-  "bugsquish-32.png:"	bccb80edd309754e22c3785dad11c9ed915abd7a
-  "bugsquish-48.png:"	8b6be9896dc687e366e313f985e2cb92cc5f9c60
+  "bugsquish-0.0.2-fix-CFLAGS.patch.bz2": 23ec2678b1458504e4c10fb265636c18a1e399f9
+  "bugsquish-0.0.6.tar.bz2": cac4dae0c7b1aaf137a3b4a77f13090843853d66
