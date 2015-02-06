@@ -1,6 +1,6 @@
 %define	name	bugsquish
 %define	version	0.0.6
-%define release	%mkrel 15
+%define release	16
 %define	Summary	Kill bugs with mouse
 
 Summary:	%{Summary}
