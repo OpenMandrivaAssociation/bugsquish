@@ -16,6 +16,7 @@ License:	GPL
 Url:		https://newbreedsoftware.com/bugsquish/
 Group:		Games/Arcade
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
+BuildRequires:	make
 BuildRequires:	SDL-devel
 BuildRequires:	SDL_image-devel
 BuildRequires:	SDL_mixer-devel
